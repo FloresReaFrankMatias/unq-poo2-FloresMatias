@@ -27,6 +27,9 @@ public abstract class Empleado {
 	public String getDireccion() {
 		return direccion;
 	}
+	public float getSueldoBasico() {
+		return sueldoBasico;
+	}
 	 
 	//public float sueldoBruto() {
 		//return sueldoBasico + sueldoFamiliar()
