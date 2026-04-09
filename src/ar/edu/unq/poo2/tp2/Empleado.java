@@ -6,7 +6,7 @@ public abstract class Empleado {
 	private String nombre;
 	private String direccion;
 	private LocalDate fechaNacimiento;
-	private float sueldoBasico;
+	private float sueldoBasico ;
 	private String estadoCivil;
 	
 
