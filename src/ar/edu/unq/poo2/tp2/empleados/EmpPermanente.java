@@ -1,4 +1,4 @@
-package ar.edu.unq.poo2.tp2;
+package ar.edu.unq.poo2.tp2.empleados;
 
 
 import java.time.LocalDate;
