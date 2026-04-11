@@ -24,11 +24,11 @@ public class   EmpPermanente  extends Empleado{
 	}
 	
 	public float sueldoFamiliar() {
-		return this.adicionalPorHijo(150); //+ this.asignacionPorConyuge();
+		return this.adicionalPorHijo(150) + this.asignacionPorConyuge();
 	}
-	//public float asignacionPorConyuge() { consultar si usar enums o strings
-	//	return this.estadoCivil()
-	//}
+	public float asignacionPorConyuge() { 
+		return (this.getEstadoCivil().equalsIgnoreCase("Casado")) ?100 :0  ;
+	}
 	public int adicionalPorHijo(int monto) {
 		return monto * cantHijos ;
 	}

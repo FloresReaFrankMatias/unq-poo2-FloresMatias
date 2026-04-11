@@ -15,7 +15,7 @@ public abstract class Empleado {
 		this.direccion = direccion;
 		this.fechaNacimiento = fechaNacimiento;
 		this.sueldoBasico= sueldoBasico;
-		this.estadoCivil = estadoCivil;
+		this.setEstadoCivil(estadoCivil);
 	}
 	
 	public int getEdad() {
@@ -51,6 +51,14 @@ public abstract class Empleado {
 	}
 	public abstract float adicionales();
 	public abstract float porcentajeDeAporteJubilatorio();
+
+	public String getEstadoCivil() {
+		return estadoCivil;
+	}
+
+	public void setEstadoCivil(String estadoCivil) {
+		this.estadoCivil = estadoCivil;
+	}
 
 	
 
