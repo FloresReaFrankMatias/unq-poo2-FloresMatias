@@ -47,6 +47,10 @@ public class EmpleadoContratado extends Empleado {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	public String desgloseConceptos() {
+	    return super.desgloseConceptos() + 
+	           "\n Retencion por  gastos adm: $" + (this.gastosAdministractivos() );
+	}
 	
 
 }

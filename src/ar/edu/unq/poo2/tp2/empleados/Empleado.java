@@ -44,7 +44,7 @@ public abstract class Empleado {
 	}
 	
 	public float obraSocial() {
-		return this.sueldoBruto() * 0.10f; // la f es porque es float, preguntar
+		return this.sueldoBruto() * 0.10f; // la f es porque es float
 	}
 	public float aportesJubilatorios() {
 		return this.sueldoBruto() * this.porcentajeDeAporteJubilatorio();
@@ -58,6 +58,12 @@ public abstract class Empleado {
 
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
+	}
+	public String desgloseConceptos() {
+		return  "Sueldo Básico: $" + this.sueldoBasico +
+				"\nRetención Obra Social: $" + this.obraSocial() +
+	              "\nRetención Jubilación: $" + this.aportesJubilatorios();
+				
 	}
 
 	

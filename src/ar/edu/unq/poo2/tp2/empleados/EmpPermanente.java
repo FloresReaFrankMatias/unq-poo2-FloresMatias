@@ -45,5 +45,14 @@ public class   EmpPermanente  extends Empleado{
 	public float porcentajeDeAporteJubilatorio() {
 		return this.sueldoBruto() * 0.10f;
 	}
+	@Override
+	public String desgloseConceptos() {
+	    return super.desgloseConceptos() + 
+	           "\nAsignación por Hijos: $" + (this.adicionalPorHijo(40)) +
+	           "\nAsignación por Cónyuge: $" + (this.asignacionPorConyuge()) +
+	           "\nAntigüedad: $" + (this.asignacionPorAntiguedad())+
+	    		"\n Retencion por hijo: $" + (this.adicionalPorHijo(20) );
+	
+	}
 
 }

@@ -52,7 +52,13 @@ public  class EmpleadoTemporario extends Empleado {
 		return this.sueldoBruto() * 0.15f;
 
 	}
-
+	@Override
+	public String desgloseConceptos() {
+	    return super.desgloseConceptos() + 
+	           "\nHoras Extras: $" + (this.adicionalPorHorasExtras(5)) +
+	           "\n Retencion por antiguedad: $" + (this.adicionalPorEdad() ) +
+	           "\n Retencion por hora extra: $" + (this.adicionalPorHorasExtras(5) );
+	}
 
 
 }
