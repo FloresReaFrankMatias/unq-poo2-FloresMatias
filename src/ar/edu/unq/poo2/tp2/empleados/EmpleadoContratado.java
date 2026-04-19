@@ -36,8 +36,14 @@ public class EmpleadoContratado extends Empleado {
 
 	@Override
 	public float adicionales() {
+		return 0;
+	}
+	
+	@Override
+	public float retenciones() {
 		return this.gastosAdministractivos();
 	}
+	
 	public int gastosAdministractivos() {
 		return 50;
 	}
@@ -45,7 +51,7 @@ public class EmpleadoContratado extends Empleado {
 	@Override
 	public float porcentajeDeAporteJubilatorio() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0f;
 	}
 	public String desgloseConceptos() {
 	    return super.desgloseConceptos() + 

@@ -43,7 +43,7 @@ public class   EmpPermanente  extends Empleado{
 	}
 	@Override
 	public float porcentajeDeAporteJubilatorio() {
-		return this.sueldoBruto() * 0.10f;
+		return 0.15f;
 	}
 	@Override
 	public String desgloseConceptos() {

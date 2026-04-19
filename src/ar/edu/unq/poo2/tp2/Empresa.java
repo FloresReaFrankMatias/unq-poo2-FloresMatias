@@ -8,27 +8,38 @@ import ar.edu.unq.poo2.tp2.Recibo;
 
 public  class Empresa {
 	private String nombre;
-	private int cuit;
+	private String cuit;
 	private List<Empleado> empleados;
 	private List<Recibo> recibos;
 	
-	public Empresa(String nombre, int cuit) {
+	public Empresa(String nombre, String cuit) {
+		super();
 		this.nombre = nombre;
-		this.cuit=cuit;
+		this.cuit = cuit;
 		this.empleados = new ArrayList<>();
 		this.recibos = new ArrayList<>();
 	}
+
 	
+	
+	public List<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCuit() {
+	public String getCuit() {
 		return cuit;
 	}
-	public void setCuit(int cuit) {
+	public void setCuit(String cuit) {
 		this.cuit = cuit;
 	}
 	
@@ -69,6 +80,10 @@ public  class Empresa {
 	public void generarRecibo(Empleado e) {
 		 Recibo nuevoRecibo = new Recibo(e);
 	        recibos.add(nuevoRecibo);
+	}
+    
+	public List<Recibo> getRecibos() {
+		return recibos;
 	}
 	
 }

@@ -9,15 +9,16 @@ public abstract class Empleado {
 	private float sueldoBasico ;
 	private String estadoCivil;
 	
-
-	public Empleado(String nombre, String direccion, LocalDate fechaNacimiento, float sueldoBasico, String estadoCivil){
+	
+	public Empleado(String nombre, String direccion, LocalDate fechaNacimiento, float sueldoBasico,
+			String estadoCivil) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.fechaNacimiento = fechaNacimiento;
-		this.sueldoBasico= sueldoBasico;
-		this.setEstadoCivil(estadoCivil);
+		this.sueldoBasico = sueldoBasico;
+		this.estadoCivil = estadoCivil;
 	}
-	
+
 	public int getEdad() {
 		return Period.between(this.fechaNacimiento, LocalDate.now()).getYears(); 
 	}
@@ -31,9 +32,7 @@ public abstract class Empleado {
 		return sueldoBasico;
 	}
 	 
-	//public float sueldoBruto() {
-		//return sueldoBasico + sueldoFamiliar()
-	//}
+	
 	public abstract float sueldoBruto();
 	
 	public float sueldoNeto() {

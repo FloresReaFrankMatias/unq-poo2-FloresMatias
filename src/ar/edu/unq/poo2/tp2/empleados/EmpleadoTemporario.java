@@ -5,10 +5,16 @@ import java.time.LocalDate;
 public  class EmpleadoTemporario extends Empleado {
 	private int cantHorasExtras;
 	private LocalDate fechaFinContrato;
+	
+	
 	public EmpleadoTemporario(String nombre, String direccion, LocalDate fechaNacimiento, float sueldoBasico,
-			String estadoCivil, int cantHorasExtras, LocalDate fechaFinContrato) {
+			String estadoCivil, int cantHorasExtras, LocalDate fechaFinContrato ) {
 		super(nombre, direccion, fechaNacimiento, sueldoBasico, estadoCivil);
+		this.cantHorasExtras =  cantHorasExtras;
+		this.fechaFinContrato = fechaFinContrato;
 	}
+
+
 	public int getCantHorasExtras() {
 		return cantHorasExtras;
 	}
@@ -49,7 +55,7 @@ public  class EmpleadoTemporario extends Empleado {
 	@Override
 	public float porcentajeDeAporteJubilatorio() {
 		// TODO Auto-generated method stub
-		return this.sueldoBruto() * 0.15f;
+		return  0.10f;
 
 	}
 	@Override
