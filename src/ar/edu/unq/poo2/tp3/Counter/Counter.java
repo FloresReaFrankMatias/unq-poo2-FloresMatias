@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public class Counter {
 	private List<Integer> numbers = new ArrayList<Integer>();
 
-	public Counter(List<Integer> numbers) {
+	public Counter() {
 		super();
-		this.numbers = numbers;
+		
 	}
 
 	public List<Integer> getNumbers() {
@@ -21,7 +21,7 @@ public class Counter {
 	
 	
 	//1- Cantidad de Pares de la lista
-	public int countEvenNumbers() {
+	public int getCountEvenNumbers() {
 		int count = 0;
 		for (Integer n : numbers) {
 			if (n % 2 == 0) {
@@ -31,7 +31,7 @@ public class Counter {
 		return count;
 	}
 	//2- Cantidad de Impares de la lista
-	public int countOddNumbers() {
+	public int getCountOddNumbers() {
 		int count = 0;
 		for (Integer n : numbers) {
 			if (n % 2 != 0) {
@@ -41,7 +41,7 @@ public class Counter {
 		return count;
 	}
 	//3- Cantidad de Multiplos de un numero pasado por parametro
-	public int countMultiplesOf(int n) {
+	public int getCountMultiplesOf(int n) {
 		int count = 0;
 		for (Integer num : numbers) {
 			if (num % n == 0) {
