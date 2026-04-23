@@ -25,7 +25,10 @@ public  class Empresa {
 	public List<Empleado> getEmpleados() {
 		return empleados;
 	}
-
+	public List<Recibo> getRecibos() {
+		return recibos;
+	}
+		
 
 
 
@@ -80,10 +83,6 @@ public  class Empresa {
 	public void generarRecibo(Empleado e) {
 		 Recibo nuevoRecibo = new Recibo(e);
 	        recibos.add(nuevoRecibo);
-	}
-    
-	public List<Recibo> getRecibos() {
-		return recibos;
 	}
 	
 }

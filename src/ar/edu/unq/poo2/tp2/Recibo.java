@@ -19,29 +19,9 @@ public class Recibo {
 	        this.concepto    = e.desgloseConceptos();
 
 	    }
-	public LocalDate getFecha() {
-		return fecha;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public float getSueldoBruto() {
-		return sueldoBruto;
-	}
-
-	public float getSueldoNeto() {
-		return sueldoNeto;
-	}
-
-	public String getConcepto() {
-		return concepto;
-	}
+	    public String getNombre() {
+	    	return nombre;
+	    }
 	    
 	}
 	
