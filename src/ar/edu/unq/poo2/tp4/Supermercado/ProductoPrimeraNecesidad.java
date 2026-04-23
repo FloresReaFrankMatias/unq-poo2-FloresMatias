@@ -4,12 +4,13 @@ public class ProductoPrimeraNecesidad {
 	private String nombre;
 	private Double precio;
 	private boolean precioCuidado ;
-
-	public ProductoPrimeraNecesidad(String nombre, Double precio, boolean precioCuidado) {
+	private Double descuento;
+	public ProductoPrimeraNecesidad(String nombre, Double precio, boolean precioCuidado, Double descuento) {
 		super();
 		this.nombre = nombre;
 		this.precio = precio;
 		this.precioCuidado = precioCuidado;
+		this.descuento=descuento;
 	}
 
 	public String getNombre() {
@@ -34,6 +35,9 @@ public class ProductoPrimeraNecesidad {
 
 	public void setPrecioCuidado(boolean precioCuidado) {
 		this.precioCuidado = precioCuidado;
+	}
+	public void setDescuento(Double descuento) {
+		this.descuento = descuento;
 	}
 	
 	
