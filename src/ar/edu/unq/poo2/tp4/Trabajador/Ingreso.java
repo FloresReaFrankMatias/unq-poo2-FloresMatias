@@ -9,6 +9,13 @@ public class Ingreso extends Trabajador {
 		this.concepto = concepto;
 		this.monto = monto;
 	}
+	public int getMes() {
+		return mes;
+	}
+	public String getConcepto() {
+		return concepto;
+	}
+	
 	public double getMonto() {
 		return monto;
 	}
