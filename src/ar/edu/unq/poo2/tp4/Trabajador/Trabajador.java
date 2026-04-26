@@ -26,7 +26,7 @@ public class Trabajador {
 		return totalImponibe;
 	}
 	public double getImpuestoAPagar() {
-		return this.getMontoImponible() * 0.2;
+		return this.getMontoImponible() * 0.02;
 	}
 
 }

@@ -1,15 +1,15 @@
 package ar.edu.unq.poo2.tp4.Trabajador;
 
 public class Ingreso extends Trabajador {
-	private int mes;
+	private String mes;
 	private String concepto;
 	private Double monto;
-	public Ingreso(int mes, String concepto, Double monto) {
+	public Ingreso(String mes, String concepto, Double monto) {
 		this.mes = mes;
 		this.concepto = concepto;
 		this.monto = monto;
 	}
-	public int getMes() {
+	public String getMes() {
 		return mes;
 	}
 	public String getConcepto() {
