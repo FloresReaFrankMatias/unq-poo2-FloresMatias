@@ -33,7 +33,11 @@ public abstract class Producto implements Pagable {
 	public void decrementarStock() {
 		this.stock--;
 	}
-	public double montoTotal() {
+	public void registarPago() {
+		this.decrementarStock();
+	}
+	
+	public double getMontoTotal() {
 		return this.getPrecioBase() * (1 - this.descuento());
 	} 
 	
