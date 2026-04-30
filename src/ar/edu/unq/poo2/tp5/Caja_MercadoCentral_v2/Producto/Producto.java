@@ -37,7 +37,7 @@ public abstract class Producto implements Pagable {
 		this.decrementarStock();
 	}
 	
-	public double getMontoTotal() {
+	public double getMontoAPagar() {
 		return this.getPrecioBase() * (1 - this.descuento());
 	} 
 	
