@@ -1,5 +1,6 @@
 package ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Producto;
 
+import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Caja;
 import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Cobrable;
 
 public abstract class Producto implements Cobrable {
@@ -10,10 +11,6 @@ public abstract class Producto implements Cobrable {
 		this.precioBase = precioBase;
 		this.stock = stock;
 	}
-
-	
-
-	
 
 	public double getPrecioBase() {
 		return precioBase;
@@ -33,8 +30,8 @@ public abstract class Producto implements Cobrable {
 	public void decrementarStock() {
 		this.stock--;
 	}
-	public void registarPago() {
-		this.decrementarStock();
+	public void registrarPago() {
+		decrementarStock();
 	}
 	
 	public double getMontoAPagar() {

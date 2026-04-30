@@ -4,5 +4,5 @@ public interface Cobrable {
 
 	
 	public double getMontoAPagar();
-	public void registarPago();
+	public void registrarPago();
 }

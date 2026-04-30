@@ -3,30 +3,36 @@ package ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.edu.unq.poo2.tp5.Caja_MercadoCentral.Producto;
+//import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Facturas.Factura;
+//import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Producto.*;
 
 public class Caja {
 
-private List<Cobrable> cobrables;
-	
+	private List<Cobrable> cobrables;
 	public Caja() {
 		this.cobrables = new ArrayList<Cobrable>();
 	}
 	
-	public void registrarProducto(Producto producto) {
-		this.validarRegistro(producto);
-		productos.add(producto);
-		producto.decrementarStock();
+	public void registrarItem(Cobrable c) {
+		cobrables.add(c);
+		c.registrarPago();
 	}
-	public void validarRegistro(Producto producto) {
-		if(!producto.hayStock()) {
-			throw new IllegalArgumentException("El producto no tiene stock");
-		}
-	}
-	
+//	
+//	public void registrarProducto(Producto p) {
+//		validarRegistro(p);
+//		cobrables.add(p);
+//		p.decrementarStock();
+//	}
+//	
+//	public void validarRegistro(Producto producto) {
+//		if(!producto.hayStock()) {
+//			throw new IllegalArgumentException("El producto no tiene stock");
+//		}
+//	}
+//	
 	public double montoTotalAPagar() {
-		return productos.stream()
-				        .mapToDouble(p -> p.montoTotal()) //esto se qyeda con el precio de cada producto
+		return cobrables.stream()
+				        .mapToDouble(p -> p.getMontoAPagar()) //esto se qyeda con el precio de cada producto
 				        .sum();
 	}
 
