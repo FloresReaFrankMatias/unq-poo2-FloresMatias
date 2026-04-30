@@ -7,10 +7,10 @@ import ar.edu.unq.poo2.tp5.Caja_MercadoCentral.Producto;
 
 public class Caja {
 
-private List<Pagable> pagables;
+private List<Cobrable> cobrables;
 	
 	public Caja() {
-		this.pagables = new ArrayList<Pagable>();
+		this.cobrables = new ArrayList<Cobrable>();
 	}
 	
 	public void registrarProducto(Producto producto) {

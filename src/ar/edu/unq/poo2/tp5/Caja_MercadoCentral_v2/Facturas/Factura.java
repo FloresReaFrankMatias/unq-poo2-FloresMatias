@@ -1,9 +1,9 @@
 package ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Facturas;
 
 import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Agencia;
-import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Pagable;
+import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Cobrable;
 
-public abstract class Factura implements Pagable{
+public abstract class Factura implements Cobrable{
 	private Agencia agencia;
 	public Factura(Agencia agencia) {
 		super();
@@ -11,7 +11,7 @@ public abstract class Factura implements Pagable{
 	}
 	@Override
 	public void registarPago() {
-		this.agencia.registrarPago(this);
+		agencia.registrarPago(this);
 	}
 	public abstract double getMontoAPagar();
 }

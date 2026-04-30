@@ -1,8 +1,8 @@
 package ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Producto;
 
-import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Pagable;
+import ar.edu.unq.poo2.tp5.Caja_MercadoCentral_v2.Cobrable;
 
-public abstract class Producto implements Pagable {
+public abstract class Producto implements Cobrable {
 	private double precioBase;
 	private int stock;
 	public Producto( double precioBase, int stock) {
