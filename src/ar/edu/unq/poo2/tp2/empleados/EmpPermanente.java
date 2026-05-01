@@ -15,9 +15,17 @@ public class   EmpPermanente  extends Empleado{
 	public void setHijos(int numero) {
 		this.cantHijos = numero;
 	}
+	public int getHijos() {
+		return this.cantHijos;
+	}
+	
 	public void setAntiguedad(int cantidad) {
 		this.antiguedad = cantidad;
 	}	
+	public int getAntiguedad() {
+		return this.antiguedad;
+	}
+	
 	@Override
 	public float sueldoBruto() {
 		return this.getSueldoBasico() + this.sueldoFamiliar() + this.asignacionPorAntiguedad(50); 
