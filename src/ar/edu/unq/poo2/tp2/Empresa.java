@@ -62,7 +62,7 @@ public  class Empresa {
 //	
 	//con stream
 	
-	public float montoTotalSueldoNeto() {
+	public float montoTotalSueldosNetos() {
 	    return (float) empleados.stream()
 	            .mapToDouble(Empleado::sueldoNeto)
 	            .sum();

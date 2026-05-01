@@ -21,7 +21,7 @@ import ar.edu.unq.poo2.tp2.empleados.EmpleadoTemporario;
 		//assertEquals(1561.5, empresa1.montoTotalRetenciones() );
 
 
-class EmpleadosTest {
+class EmpresaTest {
 	EmpleadoContratado empleadoContratado;
 	EmpleadoTemporario empleadoTemporario;
 	EmpPermanente empleadoPermanente;
@@ -40,18 +40,22 @@ class EmpleadosTest {
 
 	@Test
 	void testCalculoSueldoNetoYBruto() {
-		
 		assertEquals(7170.0, empresa1.montoTotalSueldoBruto() );
 		assertEquals(5608.5, empresa1.montoTotalSueldosNetos() );
 		
 	}
+	@Test
+	void testCalculoRetenciones() {
+		assertEquals(1561.5, empresa1.montoTotalRetenciones() );
+	}
+	
+	
 	@Test
 	void testLiquidacionDeSueldos() {
 		empresa1.liquidarSueldos();
 		assertTrue(empresa1.getRecibos().size() == 3);
 		assertEquals("Matias",empresa1.getRecibos().get(0).getNombre());
 	
-		
 	}
 
 }
