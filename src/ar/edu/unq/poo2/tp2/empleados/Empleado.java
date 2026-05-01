@@ -39,7 +39,7 @@ public abstract class Empleado {
 		return this.sueldoBruto() - this.retenciones();
 	}
 	public float retenciones() {
-		return this.obraSocial() + this.aportesJubilatorios() + this.adicionales();
+		return this.obraSocial() + this.aportesJubilatorios() + this.adicionales();// adicionales porque cada empledo tiene diferentes asignaciones que suman a las retenciones
 	}
 	
 	public float obraSocial() {
@@ -48,7 +48,7 @@ public abstract class Empleado {
 	public float aportesJubilatorios() {
 		return this.sueldoBruto() * this.porcentajeDeAporteJubilatorio();
 	}
-	public abstract float adicionales();
+	public abstract  float adicionales() ;
 	public abstract float porcentajeDeAporteJubilatorio();
 
 	public String getEstadoCivil() {

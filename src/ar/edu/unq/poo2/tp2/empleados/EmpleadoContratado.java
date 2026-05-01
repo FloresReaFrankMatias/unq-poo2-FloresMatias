@@ -41,10 +41,10 @@ public class EmpleadoContratado extends Empleado {
 	
 	@Override
 	public float retenciones() {
-		return this.gastosAdministractivos();
+		return this.gastosAdministrativos();
 	}
 	
-	public int gastosAdministractivos() {
+	public int gastosAdministrativos() {
 		return 50;
 	}
 
@@ -55,7 +55,7 @@ public class EmpleadoContratado extends Empleado {
 	}
 	public String desgloseConceptos() {
 	    return super.desgloseConceptos() + 
-	           "\n Retencion por  gastos adm: $" + (this.gastosAdministractivos() );
+	           "\n Retencion por  gastos adm: $" + (this.gastosAdministrativos() );
 	}
 	
 

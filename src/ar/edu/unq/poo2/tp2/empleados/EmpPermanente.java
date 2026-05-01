@@ -20,7 +20,7 @@ public class   EmpPermanente  extends Empleado{
 	}	
 	@Override
 	public float sueldoBruto() {
-		return this.getSueldoBasico() + this.sueldoFamiliar() + this.asignacionPorAntiguedad(); 
+		return this.getSueldoBasico() + this.sueldoFamiliar() + this.asignacionPorAntiguedad(50); 
 	}
 	
 	public float sueldoFamiliar() {
@@ -32,8 +32,8 @@ public class   EmpPermanente  extends Empleado{
 	public int adicionalPorHijo(int monto) {
 		return monto * cantHijos ;
 	}
-	public int asignacionPorAntiguedad() {
-		return antiguedad * 50;
+	public int asignacionPorAntiguedad(int monto) {
+		return antiguedad * monto;
 	}
 	
 	@Override
@@ -48,10 +48,10 @@ public class   EmpPermanente  extends Empleado{
 	@Override
 	public String desgloseConceptos() {
 	    return super.desgloseConceptos() + 
-	           "\nAsignación por Hijos: $" + (this.adicionalPorHijo(40)) +
+	           "\nAsignación por Hijos: $"   + (this.adicionalPorHijo(40)) +
 	           "\nAsignación por Cónyuge: $" + (this.asignacionPorConyuge()) +
-	           "\nAntigüedad: $" + (this.asignacionPorAntiguedad())+
-	    		"\n Retencion por hijo: $" + (this.adicionalPorHijo(20) );
+	           "\nAntigüedad: $"             + (this.asignacionPorAntiguedad(50))+
+	    		"\n Retencion por hijo: $"   + (this.adicionalPorHijo(20) );
 	
 	}
 
