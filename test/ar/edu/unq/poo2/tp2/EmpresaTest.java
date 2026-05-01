@@ -11,14 +11,7 @@ import org.junit.jupiter.api.Test;
 import ar.edu.unq.poo2.tp2.empleados.EmpPermanente;
 import ar.edu.unq.poo2.tp2.empleados.EmpleadoContratado;
 import ar.edu.unq.poo2.tp2.empleados.EmpleadoTemporario;
-//assertEquals(439.0, empleadoTemporario.retenciones() );
-		//assertEquals(2120.0, empleadoTemporario.sueldoBruto() ); //
-		//assertEquals(1681.0, empleadoTemporario.sueldoNeto() ); 
-		//assertEquals(950.0, empleadoContratado.sueldoNeto() );
-		
-		//assertEquals(7170.0, empresa1.montoTotalSueldoBruto() );
-		//assertEquals(5608.5, empresa1.montoTotalSueldosNetos() );
-		//assertEquals(1561.5, empresa1.montoTotalRetenciones() );
+
 
 
 class EmpresaTest {
