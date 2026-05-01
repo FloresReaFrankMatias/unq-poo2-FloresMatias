@@ -59,9 +59,9 @@ public abstract class Empleado {
 		this.estadoCivil = estadoCivil;
 	}
 	public String desgloseConceptos() {
-		return  "Sueldo Básico: $" + this.sueldoBasico +
+		return  "Sueldo Básico: $"           + this.sueldoBasico +
 				"\nRetención Obra Social: $" + this.obraSocial() +
-	              "\nRetención Jubilación: $" + this.aportesJubilatorios();
+	            "\nRetención Jubilación: $"  + this.aportesJubilatorios();
 				
 	}
 

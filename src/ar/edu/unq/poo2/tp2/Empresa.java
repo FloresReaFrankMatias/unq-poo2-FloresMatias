@@ -51,28 +51,56 @@ public  class Empresa {
 	}
 	
 	
+//	
+//	public float montoTotalSueldoBruto() {
+//		float brutoTotal =0;
+//		for(Empleado e: empleados) {
+//			brutoTotal += e.sueldoBruto();
+//		}
+//		return brutoTotal;
+//	}
+//	
+	//con stream
 	
+	public float montoTotalSueldoNeto() {
+	    return (float) empleados.stream()
+	            .mapToDouble(Empleado::sueldoNeto)
+	            .sum();
+	}
+
+	
+	
+//	public float montoTotalSueldosNetos() {
+//		float netoTotal =0;
+//		for(Empleado e: empleados) {
+//			netoTotal += e.sueldoNeto();
+//		}
+//		return netoTotal;
+//	}
+//	
+	//con stream
 	public float montoTotalSueldoBruto() {
-		float brutoTotal =0;
-		for(Empleado e: empleados) {
-			brutoTotal += e.sueldoBruto();
-		}
-		return brutoTotal;
+	    return (float) empleados.stream()
+	            .mapToDouble(Empleado::sueldoBruto)
+	            .sum();
 	}
-	public float montoTotalSueldosNetos() {
-		float netoTotal =0;
-		for(Empleado e: empleados) {
-			netoTotal += e.sueldoNeto();
-		}
-		return netoTotal;
-	}
+	
+	
+//	
+//	public float montoTotalRetenciones() {
+//		float retencionesTotales =0;
+//		for(Empleado e: empleados) {
+//			retencionesTotales += e.retenciones();
+//		}
+//		return retencionesTotales;
+//	}
+	
 	public float montoTotalRetenciones() {
-		float retencionesTotales =0;
-		for(Empleado e: empleados) {
-			retencionesTotales += e.retenciones();
-		}
-		return retencionesTotales;
+	    return (float) empleados.stream()
+	            .mapToDouble(Empleado::retenciones)
+	            .sum();
 	}
+	
 	public void liquidarSueldos() {
 		for( Empleado e:empleados  ) {
 			this.generarRecibo(e);
