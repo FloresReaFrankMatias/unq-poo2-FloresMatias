@@ -49,7 +49,7 @@ public abstract class Empleado {
 		return this.sueldoBruto() * this.porcentajeDeAporteJubilatorio();
 	}
 	public abstract  float adicionales() ;
-	public abstract float porcentajeDeAporteJubilatorio();
+	public  float porcentajeDeAporteJubilatorio() { return 0.0f;}
 
 	public String getEstadoCivil() {
 		return estadoCivil;

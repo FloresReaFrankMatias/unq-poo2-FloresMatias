@@ -48,11 +48,7 @@ public class EmpleadoContratado extends Empleado {
 		return 50;
 	}
 
-	@Override
-	public float porcentajeDeAporteJubilatorio() {
-		// TODO Auto-generated method stub
-		return 0f;
-	}
+	
 	public String desgloseConceptos() {
 	    return super.desgloseConceptos() + 
 	           "\n Retencion por  gastos adm: $" + (this.gastosAdministrativos() );
