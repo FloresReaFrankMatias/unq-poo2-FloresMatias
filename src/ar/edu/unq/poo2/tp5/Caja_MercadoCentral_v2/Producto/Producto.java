@@ -38,6 +38,6 @@ public abstract class Producto implements Cobrable {
 		return this.getPrecioBase() * (1 - this.descuento());
 	} 
 	
-	public abstract double  descuento() ;
+	public  double  descuento() { return 0d;}
 
 }

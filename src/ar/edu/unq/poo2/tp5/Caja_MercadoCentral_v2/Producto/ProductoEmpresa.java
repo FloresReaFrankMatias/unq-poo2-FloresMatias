@@ -9,11 +9,6 @@ public class ProductoEmpresa extends Producto {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public double descuento() {
-		// TODO Auto-generated method stub
-		return 0d;
-	}
-
+	
 	
 }
