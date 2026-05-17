@@ -22,9 +22,14 @@ public abstract class SolicitudCredito extends Banco {
 	}
 	
 	public Double getCuotaMensual() {
-		return monto/plazo;
+		return this.getMonto()/this.getPlazo();
 	}
 	
+	public int getPlazo() {
+		// TODO Auto-generated method stub
+		return plazo;
+	}
+
 	public abstract boolean esAceptable(Cliente cliente);
 
 }

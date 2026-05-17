@@ -14,7 +14,7 @@ public class Cliente {
 		this.direccion = direccion;
 		this.edad = edad;
 		this.sueldoNetoMensual = sueldoNetoMensual;
-		this.montoCredito = montoCredito;
+		this.setMontoCredito(montoCredito);
 	}
 	public String getNombre() {
 		return nombre;
@@ -46,10 +46,20 @@ public class Cliente {
 	public void setSueldoNetoMensual(double sueldoNetoMensual) {
 		this.sueldoNetoMensual = sueldoNetoMensual;
 	}
+	
+	public double getSueldoNetoAnual() {
+		return this.getSueldoNetoMensual() * 12d;
+	}
 
 	
 	public void recibirCredito(double monto) {
-		this.montoCredito += monto;
+		this.setMontoCredito(this.getMontoCredito() + monto);
+	}
+	public double getMontoCredito() {
+		return montoCredito;
+	}
+	public void setMontoCredito(double montoCredito) {
+		this.montoCredito = montoCredito;
 	}
 
 }
