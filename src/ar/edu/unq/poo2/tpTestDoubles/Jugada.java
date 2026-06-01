@@ -1,27 +1,35 @@
 package ar.edu.unq.poo2.tpTestDoubles;
 
-public abstract class JugadaBase implements Jugada {
-
+public  class Jugada  {
+	private TipoJugada tipoJugada;
 	private ValorCarta valorPrincipal;
 
-    public JugadaBase(ValorCarta valorPrincipal) {
+    public Jugada(TipoJugada tipoJugada, ValorCarta valorPrincipal ) {
+    	this.tipoJugada = tipoJugada;
         this.valorPrincipal = valorPrincipal;
     }
 
-    @Override
+   
+    
+
+
+	
+    
+    
     public ValorCarta valorPrincipal() {
         return valorPrincipal;
     }
+    public TipoJugada getTipoJugada() {
+    	return tipoJugada;
+    }
 
-    @Override
-    public boolean leGanaA(Jugada otra) {
-
-        if(this.prioridad() != otra.prioridad()) {
-            return this.prioridad() > otra.prioridad();
+    
+    public boolean leGanaA( Jugada j2) {
+        if(this.tipoJugada.getPrioridad() == j2.tipoJugada.getPrioridad() ) {
+            return this.valorPrincipal.getValor() > j2.valorPrincipal.getValor();
         }
 
-        return valorPrincipal.getValor() >
-               otra.valorPrincipal().getValor();
+        return this.tipoJugada.getPrioridad() > j2.tipoJugada.getPrioridad();
     }
 
 }

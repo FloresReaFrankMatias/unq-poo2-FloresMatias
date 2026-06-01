@@ -1,10 +1,10 @@
 package ar.edu.unq.poo2.tpTestDoubles;
 
 public enum Palo {
-	Picas("P"), 
-	Corazones("C"), 
-	Diamantes("D"), 
-	Treboles("T");
+	PICAS("P"), 
+	CORAZONES("C"), 
+	DIAMANTE("D"), 
+	TREBOL("T");
 	private String palo;
 	
 	Palo(String palo) {
